@@ -6,6 +6,7 @@ RUN apk add --no-cache --virtual .build-deps \
         gcc make musl-dev openssl-dev libffi-dev \
     && pip3 install awsebcli --upgrade --user \
     && apk del .build-deps \
-    && rm -rf /root/.cache
+    && rm -rf /root/.cache \
+    && apk add --no-cache git
 
 CMD [ "eb" ]
