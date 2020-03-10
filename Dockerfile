@@ -8,4 +8,4 @@ RUN apk add --no-cache --virtual .build-deps \
     && apk del .build-deps \
     && rm -rf /root/.cache
 
-ENTRYPOINT [ "eb" ]
+CMD [ "eb" ]
